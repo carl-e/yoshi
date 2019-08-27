@@ -43,7 +43,8 @@ module.exports = function(api, opts = {}) {
           // Allow users to provide its own targets and supply target node for test environment by default.
           targets:
             options.targets ||
-            (isDevelopment && 'last 1 Chrome versions') ||
+            (isDevelopment &&
+              'last 2 chrome versions, last 2 firefox versions') ||
             (isTest && 'current node'),
         },
       ],
